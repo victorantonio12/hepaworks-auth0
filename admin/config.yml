@@ -1,0 +1,23 @@
+backend:
+  name: git-gateway
+  branch: main
+  login:
+    provider: auth0
+    client_id: HRTBsNMXCH3aKwdTVdEN7Q74I0LN3Cwv
+    domain: dev-ljk17u8aphwl865m.us.auth0.com
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "blog"
+    label: "Entradas del Blog"
+    folder: "posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Título", name: "title", widget: "string"}
+      - {label: "Fecha", name: "date", widget: "datetime"}
+      - {label: "Categoría", name: "category", widget: "select", options: ["Diseño", "Mundo", "Curiosidades"]}
+      - {label: "Imagen", name: "image", widget: "image"}
+      - {label: "Contenido", name: "body", widget: "markdown"}
