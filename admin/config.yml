@@ -1,20 +1,18 @@
 backend:
-  name: github
-  repo: "victorantonio12/hepaworks-auth0"
+  name: git-gateway
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "images/uploads" # Carpeta donde se subirán las imágenes
+public_folder: "/images/uploads"
 
 collections:
-  - name: "blog"
-    label: "Entradas del Blog"
+  - name: "posts"
+    label: "Entradas"
     folder: "posts"
     create: true
     slug: "{{slug}}"
     fields:
-      - {label: "Título", name: "title", widget: "string"}
-      - {label: "Fecha", name: "date", widget: "datetime"}
-      - {label: "Categoría", name: "category", widget: "select", options: ["Diseño", "Mundo", "Curiosidades"]}
-      - {label: "Imagen", name: "image", widget: "image"}
-      - {label: "Contenido", name: "body", widget: "markdown"}
+      - { label: "Título", name: "title", widget: "string" }
+      - { label: "Fecha", name: "date", widget: "datetime" }
+      - { label: "Imagen destacada", name: "thumbnail", widget: "image" }
+      - { label: "Contenido", name: "body", widget: "markdown" }
