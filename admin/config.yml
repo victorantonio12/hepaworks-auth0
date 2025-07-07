@@ -1,10 +1,7 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: "victorantonio12/hepaworks-auth0"
   branch: main
-  login:
-    provider: auth0
-    client_id: HRTBsNMXCH3aKwdTVdEN7Q74I0LN3Cwv
-    domain: dev-ljk17u8aphwl865m.us.auth0.com
 
 media_folder: "images"
 public_folder: "/images"
